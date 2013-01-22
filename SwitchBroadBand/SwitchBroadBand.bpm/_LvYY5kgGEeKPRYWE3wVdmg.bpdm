@@ -1,0 +1,64 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Switching_BroadBand="http://thisdiagram/Switching_BroadBand" xmlns:UserMAC="http://www.intalio.com/gi/UserMAC.gi/attachments" xmlns:UserMAC1="http://www.intalio.com/gi/UserMAC.gi" xmlns:this="http://thisdiagram/User" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RequestingMAC="http://www.intalio.com/gi/RequestingMAC.gi" xmlns:diag="http://thisdiagram" xmlns:attachments="http://www.intalio.com/gi/RequestingMAC.gi/attachments" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/User">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Switching_BroadBand" bpdm:prefix="Switching_BroadBand" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi/attachments" bpdm:prefix="UserMAC" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi" bpdm:prefix="UserMAC1" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/User" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/RequestingMAC.gi" bpdm:prefix="RequestingMAC" bpdm:comment="contrib=&apos;project:///RequestingMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/RequestingMAC.gi/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///RequestingMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg" bpdm:label="Switching BroadBand"/>
+        <bpdm:namespaceContributor bpdm:url="project:///RequestingMAC.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///RequestingMAC.gi/IntalioInternal/FormModel.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi/IntalioInternal/FormModel.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="User" bpdm:ID="_LvYY5kgGEeKPRYWE3wVdmg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="switching_BroadBandAndUserForPortTypeProcessPlkVar" partnerLinkType="diag:Switching_BroadBandAndUserForPortTypeProcessPlk" initializePartnerRole="yes" partnerRole="Switching_BroadBand_for_User" bpdm:invokedService="Switching_BroadBand:Switching_BroadBandAndUserForPortTypeProcessPlkService" bpdm:invokedPort="Switching_BroadBand_for_UserPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Switching_BroadBand/User/Switching_BroadBandAndUserForPortTypeProcessPlk" bpdm:invokedIsDefault="true" bpdm:clientTasks="_LvYY5kgGEeKPRYWE3wVdmg:_Nro0xkgHEeKPRYWE3wVdmg" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+            <bpel:partnerLink name="wFmagic_ew1vRkgUEeKac_A_qn2j1QPlkVar" partnerLinkType="diag:WFmagic_ew1vRkgUEeKac_A_qn2j1Q" initializePartnerRole="no" myRole="User_for_Switching_BroadBandForUserMACPort" bpdm:enableSharing="false" bpdm:providedService="UserMAC1:WorkflowSoapService" bpdm:providedPort="UserMACPort" bpdm:provideSOAPAddress="http://localhost:8080/fds/workflow/UserMAC" bpdm:providedIsDefault="true" partnerRole="Switching_BroadBand_for_UserForThePortTypeProcess" bpdm:invokedService="Switching_BroadBand:WFmagic_ew1vRkgUEeKac_A_qn2j1QService" bpdm:invokedPort="Switching_BroadBand_for_UserForThePortTypeProcessPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Switching_BroadBand/User/WFmagic_ew1vRkgUEeKac_A_qn2j1Q" bpdm:invokedIsDefault="true" bpdm:clientTasks="_LvYY5kgGEeKPRYWE3wVdmg:_ew1vR0gUEeKac_A_qn2j1Q, _LvYY5kgGEeKPRYWE3wVdmg:_ew1vRkgUEeKac_A_qn2j1Q" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="requestingMACInitProcessRequestMsg" messageType="RequestingMAC:initProcessRequest" bpdm:id="_O4__wEgHEeKPRYWE3wVdmg" bpdm:messageIds=" out:_O4tE0EgHEeKPRYWE3wVdmg">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="RequestingMAC:initProcessRequest" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="requestingMACInitProcessResponseMsg" messageType="RequestingMAC:initProcessResponse" bpdm:id="_P8igdkgHEeKPRYWE3wVdmg" bpdm:messageIds="inc:_P8PlcEgHEeKPRYWE3wVdmg"/>
+            <bpel:variable name="userMAC1CreateTaskRequestMsg" messageType="UserMAC1:createTaskRequest" binding="UserMAC1:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_hJx8l0gUEeKac_A_qn2j1Q" bpdm:messageIds="inc:_hJMGsEgUEeKac_A_qn2j1Q"/>
+            <bpel:variable name="userMAC1CreateTaskResponseMsg" messageType="UserMAC1:createTaskResponse" binding="UserMAC1:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_h5rvgEgUEeKac_A_qn2j1Q" bpdm:messageIds=" out:_h5Y0kEgUEeKac_A_qn2j1Q">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="UserMAC1:createTaskResponse" bpdm:linkedPart="root" bpdm:binding="UserMAC1:WorkflowSoapBinding" bpdm:opMsgType="1" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="userMAC1NotifyTaskCompletionRequestMsg" messageType="UserMAC1:notifyTaskCompletionRequest" bpdm:id="_ifLCMEgUEeKac_A_qn2j1Q" bpdm:messageIds=" out:_ieu9UEgUEeKac_A_qn2j1Q">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="UserMAC1:notifyTaskCompletionRequest" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="userMAC1NotifyTaskCompletionResponseMsg" messageType="UserMAC1:notifyTaskCompletionResponse" bpdm:id="_i-uE90gUEeKac_A_qn2j1Q" bpdm:messageIds="inc:_i-HoAEgUEeKac_A_qn2j1Q"/>
+        </bpel:variables>
+        <bpel:flow>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_ew1vRkgUEeKac_A_qn2j1QPlkVar" portType="UserMAC1:Workflow" isMyRole="true" enableSharing="false" bpdm:label="UserMAC-create" bpdm:ID="_ew1vRkgUEeKac_A_qn2j1Q">
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="userMAC1CreateTaskRequestMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="UserMAC1:createTaskRequest" bpdm:binding="UserMAC1:WorkflowSoapBinding" bpdm:ID="_hJMGsEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="userMAC1CreateTaskResponseMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="UserMAC1:createTaskResponse" bpdm:binding="UserMAC1:WorkflowSoapBinding" bpdm:ID="_h5Y0kEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+                </bpdm:messagingtask>
+                <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_ew1vRkgUEeKac_A_qn2j1QPlkVar" portType="UserMAC1:Process" isMyRole="false" enableSharing="false" bpdm:label="UserMAC-complete" bpdm:ID="_ew1vR0gUEeKac_A_qn2j1Q">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="userMAC1NotifyTaskCompletionRequestMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="UserMAC1:notifyTaskCompletionRequest" bpdm:ID="_ieu9UEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="userMAC1NotifyTaskCompletionResponseMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="UserMAC1:notifyTaskCompletionResponse" bpdm:ID="_i-HoAEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="initProcess" partnerLink="switching_BroadBandAndUserForPortTypeProcessPlkVar" portType="RequestingMAC:Process" isMyRole="false" enableSharing="false" bpdm:label="RequestingMAC-init request" bpdm:ID="_Nro0xkgHEeKPRYWE3wVdmg">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="requestingMACInitProcessRequestMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="RequestingMAC:initProcessRequest" bpdm:ID="_O4tE0EgHEeKPRYWE3wVdmg"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="requestingMACInitProcessResponseMsg" bpdm:msgVarScopeId="_LvYY5kgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="RequestingMAC:initProcessResponse" bpdm:ID="_P8PlcEgHEeKPRYWE3wVdmg"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+        </bpel:flow>
+    </bpel:scope>
+</bpel:process>

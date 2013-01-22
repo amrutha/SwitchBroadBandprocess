@@ -1,0 +1,53 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Switching_BroadBand="http://thisdiagram/Switching_BroadBand" xmlns:UserMAC="http://www.intalio.com/gi/UserMAC.gi/attachments" xmlns:UserMAC1="http://www.intalio.com/gi/UserMAC.gi" xmlns:this="http://thisdiagram/Provider-1" xmlns:attachments="http://www.intalio.com/gi/MigrationAuthorisationCode.gi/attachments" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MigrationAuthorisationCode="http://www.intalio.com/gi/MigrationAuthorisationCode.gi" xmlns:RequestingMAC="http://www.intalio.com/gi/RequestingMAC.gi" xmlns:diag="http://thisdiagram" xmlns:RequestingMAC1="http://www.intalio.com/gi/RequestingMAC.gi/attachments" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Provider-1">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Switching_BroadBand" bpdm:prefix="Switching_BroadBand" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi/attachments" bpdm:prefix="UserMAC" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi" bpdm:prefix="UserMAC1" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Provider-1" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/MigrationAuthorisationCode.gi/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///MigrationAuthorisationCode.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/MigrationAuthorisationCode.gi" bpdm:prefix="MigrationAuthorisationCode" bpdm:comment="contrib=&apos;project:///MigrationAuthorisationCode.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/RequestingMAC.gi" bpdm:prefix="RequestingMAC" bpdm:comment="contrib=&apos;project:///RequestingMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/RequestingMAC.gi/attachments" bpdm:prefix="RequestingMAC1" bpdm:comment="contrib=&apos;project:///RequestingMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg" bpdm:label="Switching BroadBand"/>
+        <bpdm:namespaceContributor bpdm:url="project:///MigrationAuthorisationCode.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///MigrationAuthorisationCode.gi/IntalioInternal/FormModel.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi/IntalioInternal/FormModel.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///RequestingMAC.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///RequestingMAC.gi/IntalioInternal/FormModel.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Provider-1" bpdm:ID="_XbQxMEgGEeKPRYWE3wVdmg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="wFmagic_WbeStkgHEeKPRYWE3wVdmgPlkVar" partnerLinkType="diag:WFmagic_WbeStkgHEeKPRYWE3wVdmg" initializePartnerRole="no" myRole="Provider-1_for_Switching_BroadBandForMigrationAuthorisationCodePort" bpdm:enableSharing="false" bpdm:providedService="MigrationAuthorisationCode:WorkflowSoapService" bpdm:providedPort="MigrationAuthorisationCodePort" bpdm:provideSOAPAddress="http://localhost:8080/fds/workflow/MigrationAuthorisationCode" bpdm:providedIsDefault="true" partnerRole="Switching_BroadBand_for_Provider-1ForThePortTypeProcess" bpdm:invokedService="Switching_BroadBand:WFmagic_WbeStkgHEeKPRYWE3wVdmgService" bpdm:invokedPort="Switching_BroadBand_for_Provider-1ForThePortTypeProcessPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Switching_BroadBand/Provider-1/WFmagic_WbeStkgHEeKPRYWE3wVdmg" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XbQxMEgGEeKPRYWE3wVdmg:_WbeSt0gHEeKPRYWE3wVdmg, _XbQxMEgGEeKPRYWE3wVdmg:_WbeStkgHEeKPRYWE3wVdmg" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="migrationAuthorisationCodeCreateTaskRequestMsg" messageType="MigrationAuthorisationCode:createTaskRequest" binding="MigrationAuthorisationCode:WorkflowSoapBinding" operation="createTask" opMsgType="0" bpdm:id="_XkODhkgHEeKPRYWE3wVdmg" bpdm:messageIds="inc:_Xj7IgEgHEeKPRYWE3wVdmg"/>
+            <bpel:variable name="migrationAuthorisationCodeCreateTaskResponseMsg" messageType="MigrationAuthorisationCode:createTaskResponse" binding="MigrationAuthorisationCode:WorkflowSoapBinding" operation="createTask" opMsgType="1" bpdm:id="_X6FlwEgHEeKPRYWE3wVdmg" bpdm:messageIds=" out:_X5yq0EgHEeKPRYWE3wVdmg">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="MigrationAuthorisationCode:createTaskResponse" bpdm:linkedPart="root" bpdm:binding="MigrationAuthorisationCode:WorkflowSoapBinding" bpdm:opMsgType="1" bpdm:operation="createTask"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="migrationAuthorisationCodeNotifyTaskCompletionRequestMsg" messageType="MigrationAuthorisationCode:notifyTaskCompletionRequest" bpdm:id="_Ya-FQEgHEeKPRYWE3wVdmg" bpdm:messageIds=" out:_YarKUEgHEeKPRYWE3wVdmg">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="MigrationAuthorisationCode:notifyTaskCompletionRequest" bpdm:linkedPart="root"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="migrationAuthorisationCodeNotifyTaskCompletionResponseMsg" messageType="MigrationAuthorisationCode:notifyTaskCompletionResponse" bpdm:id="_YshvYkgHEeKPRYWE3wVdmg" bpdm:messageIds="inc:_YsFDYEgHEeKPRYWE3wVdmg"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="createTask" partnerLink="wFmagic_WbeStkgHEeKPRYWE3wVdmgPlkVar" portType="MigrationAuthorisationCode:Workflow" isMyRole="true" enableSharing="false" bpdm:label="MigrationAuthorisationCode-create" bpdm:ID="_WbeStkgHEeKPRYWE3wVdmg">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="migrationAuthorisationCodeCreateTaskRequestMsg" bpdm:msgVarScopeId="_XbQxMEgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="MigrationAuthorisationCode:createTaskRequest" bpdm:binding="MigrationAuthorisationCode:WorkflowSoapBinding" bpdm:ID="_Xj7IgEgHEeKPRYWE3wVdmg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="migrationAuthorisationCodeCreateTaskResponseMsg" bpdm:msgVarScopeId="_XbQxMEgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="MigrationAuthorisationCode:createTaskResponse" bpdm:binding="MigrationAuthorisationCode:WorkflowSoapBinding" bpdm:ID="_X5yq0EgHEeKPRYWE3wVdmg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="notifyTaskCompletion" partnerLink="wFmagic_WbeStkgHEeKPRYWE3wVdmgPlkVar" portType="MigrationAuthorisationCode:Process" isMyRole="false" enableSharing="false" bpdm:label="MigrationAuthorisationCode-complete" bpdm:ID="_WbeSt0gHEeKPRYWE3wVdmg">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="migrationAuthorisationCodeNotifyTaskCompletionRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="MigrationAuthorisationCode:notifyTaskCompletionRequest" bpdm:ID="_YarKUEgHEeKPRYWE3wVdmg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="migrationAuthorisationCodeNotifyTaskCompletionResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="MigrationAuthorisationCode:notifyTaskCompletionResponse" bpdm:ID="_YsFDYEgHEeKPRYWE3wVdmg"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

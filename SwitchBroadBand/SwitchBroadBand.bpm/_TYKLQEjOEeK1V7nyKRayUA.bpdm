@@ -1,0 +1,34 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Switching_BroadBand="http://thisdiagram/Switching_BroadBand" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/Database" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:ns="urn:intalio.com:connectors:database:switchbroadband:deleteuserservice" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Database">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Switching_BroadBand" bpdm:prefix="Switching_BroadBand" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Database" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:switchbroadband:deleteuserservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///DeleteUser.sql/DeleteUser.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg" bpdm:label="Switching BroadBand"/>
+        <bpdm:namespaceContributor bpdm:url="project:///DeleteUser.sql/DeleteUser.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///DeleteUser.sql/DeleteUser.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Database" bpdm:ID="_TYKLQEjOEeK1V7nyKRayUA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="switching_BroadBandAndDatabaseForDeleteUserPortPlkVar" partnerLinkType="diag:Switching_BroadBandAndDatabaseForDeleteUserPortPlk" myRole="Database_for_Switching_BroadBand" bpdm:enableSharing="false" bpdm:providedService="ns:DeleteUserService" bpdm:providedPort="DeleteUserPort" bpdm:provideSOAPAddress="http://localhost:8080/ode/processes/SwitchBroadBand/DeleteUser-def85028-a200-441e-a534-516480895afb" bpdm:providedIsDefault="true" bpdm:clientTasks="_TYKLQEjOEeK1V7nyKRayUA:_uJuwVkjOEeK1V7nyKRayUA" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="nsDeleteUserRequestMsg" messageType="ns:DeleteUserInput" binding="ns:DeleteUserPortSoapBinding" operation="DeleteUser" opMsgType="0" bpdm:id="_wsyi90jOEeK1V7nyKRayUA" bpdm:messageIds="inc:_wsC8EEjOEeK1V7nyKRayUA"/>
+            <bpel:variable name="nsDeleteUserResponseMsg" messageType="ns:DeleteUserOutput" binding="ns:DeleteUserPortSoapBinding" operation="DeleteUser" opMsgType="1" bpdm:id="_x2k1gEjOEeK1V7nyKRayUA" bpdm:messageIds=" out:_x2R6kEjOEeK1V7nyKRayUA">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:DeleteUserOutput" bpdm:linkedPart="parameters" bpdm:binding="ns:DeleteUserPortSoapBinding" bpdm:opMsgType="1" bpdm:operation="DeleteUser"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="DeleteUser" partnerLink="switching_BroadBandAndDatabaseForDeleteUserPortPlkVar" portType="ns:DeleteUserPort" isMyRole="true" enableSharing="false" bpdm:label="Provide-Service-Deleteuser" bpdm:ID="_uJuwVkjOEeK1V7nyKRayUA">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="nsDeleteUserRequestMsg" bpdm:msgVarScopeId="_TYKLQEjOEeK1V7nyKRayUA" bpdm:variableIsManaged="true" bpdm:messageType="ns:DeleteUserInput" bpdm:binding="ns:DeleteUserPortSoapBinding" bpdm:ID="_wsC8EEjOEeK1V7nyKRayUA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="nsDeleteUserResponseMsg" bpdm:msgVarScopeId="_TYKLQEjOEeK1V7nyKRayUA" bpdm:variableIsManaged="true" bpdm:messageType="ns:DeleteUserOutput" bpdm:binding="ns:DeleteUserPortSoapBinding" bpdm:ID="_x2R6kEjOEeK1V7nyKRayUA"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

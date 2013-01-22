@@ -1,0 +1,39 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Switching_BroadBand="http://thisdiagram/Switching_BroadBand" xmlns:attachments="http://www.intalio.com/gi/UserMAC.gi/attachments" xmlns:this="http://thisdiagram/Provider-2" xmlns:UserMAC="http://www.intalio.com/gi/UserMAC.gi" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:NotifyProviderTwo="http://www.intalio.com/gi/NotifyProviderTwo.gi/attachments" xmlns:diag="http://thisdiagram" xmlns:NotifyProviderTwo1="http://www.intalio.com/gi/NotifyProviderTwo.gi" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Provider-2">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Switching_BroadBand" bpdm:prefix="Switching_BroadBand" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Provider-2" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/UserMAC.gi" bpdm:prefix="UserMAC" bpdm:comment="contrib=&apos;project:///UserMAC.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/NotifyProviderTwo.gi/attachments" bpdm:prefix="NotifyProviderTwo" bpdm:comment="contrib=&apos;project:///NotifyProviderTwo.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/gi/NotifyProviderTwo.gi" bpdm:prefix="NotifyProviderTwo1" bpdm:comment="contrib=&apos;project:///NotifyProviderTwo.gi.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///UserMAC.gi/IntalioInternal/FormModel.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///NotifyProviderTwo.gi.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///NotifyProviderTwo.gi/IntalioInternal/FormModel.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg" bpdm:label="Switching BroadBand"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Provider-2" bpdm:ID="_aRqWkEgGEeKPRYWE3wVdmg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="provider-2AndSwitching_BroadBandForNotifyProviderTwoPortPlkVar" partnerLinkType="diag:Provider-2AndSwitching_BroadBandForNotifyProviderTwoPortPlk" myRole="Provider-2_for_Switching_BroadBand" bpdm:enableSharing="false" bpdm:providedService="NotifyProviderTwo1:WorkflowSoapService" bpdm:providedPort="NotifyProviderTwoPort" bpdm:provideSOAPAddress="http://localhost:8080/fds/workflow/NotifyProviderTwo" bpdm:providedIsDefault="true" bpdm:clientTasks="_aRqWkEgGEeKPRYWE3wVdmg:_TC6UFkgKEeKac_A_qn2j1Q" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="notifyProviderTwo1NotifyRequestMsg" messageType="NotifyProviderTwo1:notifyRequest" binding="NotifyProviderTwo1:WorkflowSoapBinding" operation="notify" opMsgType="0" bpdm:id="_bn2lF0gUEeKac_A_qn2j1Q" bpdm:messageIds="inc:_bnZ5IEgUEeKac_A_qn2j1Q"/>
+            <bpel:variable name="notifyProviderTwo1NotifyResponseMsg" messageType="NotifyProviderTwo1:notifyResponse" binding="NotifyProviderTwo1:WorkflowSoapBinding" operation="notify" opMsgType="1" bpdm:id="_cKgmMEgUEeKac_A_qn2j1Q" bpdm:messageIds=" out:_cKNrQEgUEeKac_A_qn2j1Q">
+                <bpel:from bpdm:toPart="root">
+                    <bpel:literal bpdm:linkedMessageType="NotifyProviderTwo1:notifyResponse" bpdm:linkedPart="root" bpdm:binding="NotifyProviderTwo1:WorkflowSoapBinding" bpdm:opMsgType="1" bpdm:operation="notify"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="notify" partnerLink="provider-2AndSwitching_BroadBandForNotifyProviderTwoPortPlkVar" portType="NotifyProviderTwo1:Workflow" isMyRole="true" enableSharing="false" bpdm:label="NotifyProviderTwo-notify" bpdm:ID="_TC6UFkgKEeKac_A_qn2j1Q">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="notifyProviderTwo1NotifyRequestMsg" bpdm:msgVarScopeId="_aRqWkEgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="NotifyProviderTwo1:notifyRequest" bpdm:binding="NotifyProviderTwo1:WorkflowSoapBinding" bpdm:ID="_bnZ5IEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="notifyProviderTwo1NotifyResponseMsg" bpdm:msgVarScopeId="_aRqWkEgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="NotifyProviderTwo1:notifyResponse" bpdm:binding="NotifyProviderTwo1:WorkflowSoapBinding" bpdm:ID="_cKNrQEgUEeKac_A_qn2j1Q"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

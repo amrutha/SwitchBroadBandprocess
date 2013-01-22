@@ -1,0 +1,33 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Switching_BroadBand="http://thisdiagram/Switching_BroadBand" xmlns:ns0="http://bpms.intalio.com/tools/webservices/email" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://thisdiagram/E-Mail_Service" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/E-Mail_Service">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Switching_BroadBand" bpdm:prefix="Switching_BroadBand" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/tools/webservices/email" bpdm:prefix="ns0" bpdm:comment="contrib=&apos;project:///EmailWS.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/E-Mail_Service" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_UHjkwEgGEeKPRYWE3wVdmg" bpdm:label="Switching BroadBand"/>
+        <bpdm:namespaceContributor bpdm:url="project:///EmailWS.wsdl"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="E-Mail Service" bpdm:ID="_cM2Q4EgGEeKPRYWE3wVdmg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="e-Mail_ServiceAndSwitching_BroadBandForEmailWSSOAP11port_httpPlkVar" partnerLinkType="diag:E-Mail_ServiceAndSwitching_BroadBandForEmailWSSOAP11port_httpPlk" myRole="E-Mail_Service_for_Switching_BroadBand" bpdm:enableSharing="false" bpdm:providedService="ns0:EmailWS" bpdm:providedPort="EmailWSSOAP11port_http" bpdm:provideSOAPAddress="http://localhost:8080/axis2/services/EmailWS.EmailWSSOAP11port_http/" bpdm:providedIsDefault="true" bpdm:clientTasks="_cM2Q4EgGEeKPRYWE3wVdmg:_EEhCIEgKEeKac_A_qn2j1Q" bpdm:isManaged="true" bpdm:otherPoolId="_UHjkwEgGEeKPRYWE3wVdmg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="ns0SendRequestMsg" messageType="ns0:sendRequest" binding="ns0:EmailWSSOAP11Binding" operation="send" opMsgType="0" bpdm:id="_FrK26EgKEeKac_A_qn2j1Q" bpdm:messageIds="inc:_FqlBAEgKEeKac_A_qn2j1Q"/>
+            <bpel:variable name="ns0SendResponseMsg" messageType="ns0:sendResponse" binding="ns0:EmailWSSOAP11Binding" operation="send" opMsgType="1" bpdm:id="_GaL5AEgKEeKac_A_qn2j1Q" bpdm:messageIds=" out:_GaCIAEgKEeKac_A_qn2j1Q">
+                <bpel:from bpdm:toPart="Response">
+                    <bpel:literal bpdm:linkedMessageType="ns0:sendResponse" bpdm:linkedPart="Response" bpdm:binding="ns0:EmailWSSOAP11Binding" bpdm:opMsgType="1" bpdm:operation="send"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="send" partnerLink="e-Mail_ServiceAndSwitching_BroadBandForEmailWSSOAP11port_httpPlkVar" portType="ns0:EmailWSPortType" isMyRole="true" enableSharing="false" bpdm:label="send" bpdm:ID="_EEhCIEgKEeKac_A_qn2j1Q">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="ns0SendRequestMsg" bpdm:msgVarScopeId="_cM2Q4EgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendRequest" bpdm:binding="ns0:EmailWSSOAP11Binding" bpdm:ID="_FqlBAEgKEeKac_A_qn2j1Q"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="ns0SendResponseMsg" bpdm:msgVarScopeId="_cM2Q4EgGEeKPRYWE3wVdmg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendResponse" bpdm:binding="ns0:EmailWSSOAP11Binding" bpdm:ID="_GaCIAEgKEeKac_A_qn2j1Q"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

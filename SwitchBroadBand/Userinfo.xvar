@@ -1,0 +1,18 @@
+﻿<xbpms:descriptor targetNamespace="http://test.com/xvar/example" xmlns:xbpms="http://bpms.intalio.com/externalVariables" xmlns:xvar="http://ode.apache.org/externalVariables" xmlns:xjdbc="http://ode.apache.org/externalVariables/jdbc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://test.com/xvar/example">
+  <xbpms:import namespace="http://test.com/xvar/example" schemaLocation="${currentFileName}.xsd"/>
+  <xbpms:externalVariable name="metric1">
+    <xbpms:description>default description</xbpms:description>
+    <xbpms:binding>
+      <xjdbc:jdbc>
+        <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
+        <xjdbc:table xbpms:isDefault="true">metric1</xjdbc:table>
+        <xjdbc:column xbpms:type-label="process-instance-id" name="id" key="yes" generator="iid"/>
+        <xjdbc:column xbpms:ddl-size="250" xbpms:type-label="string" name="name" key="no" sql-type="VARCHAR" xsd-type="xs:string"/>
+        <xjdbc:column xbpms:type-label="integer" name="phno" key="no" sql-type="INTEGER" xsd-type="xs:integer"/>
+        <xjdbc:column xbpms:ddl-size="250" xbpms:type-label="string" name="address" key="no" sql-type="VARCHAR" xsd-type="xs:string"/>
+        <xjdbc:column xbpms:ddl-size="250" xbpms:type-label="string" name="mac" key="no" sql-type="VARCHAR" xsd-type="xs:string"/>
+        <xjdbc:init mode="update-insert"/>
+      </xjdbc:jdbc>
+    </xbpms:binding>
+  </xbpms:externalVariable>
+</xbpms:descriptor>
